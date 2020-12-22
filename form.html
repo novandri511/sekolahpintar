@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Butuh Landing Page</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+
+    <!-- Font Awesome if you need it
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+  -->
+    <link
+      href="https://unpkg.com/tailwindcss/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <!--Replace with your tailwind.css once created-->
+    <link
+      href="https://unpkg.com/@tailwindcss/custom-forms/dist/custom-forms.min.css"
+      rel="stylesheet"
+    />
+    <!--Tailwind Custom Forms - use to standardise form fields - https://github.com/tailwindcss/custom-forms-->
+
+    <style>
+      @import url("https://rsms.me/inter/inter.css");
+      html {
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+          "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+          "Noto Color Emoji";
+      }
+
+      .gradient {
+        background-image: linear-gradient(-225deg, #cbbacc 0%, #2580b3 100%);
+      }
+      .dark {
+        background-color: #113b53;
+      }
+      button,
+      .gradient2 {
+        background-color: #f39f86;
+        background-image: linear-gradient(315deg, #f39f86 0%, #f9d976 74%);
+      }
+
+      /* Browser mockup code
+ * Contribute: https://gist.github.com/jarthod/8719db9fef8deb937f4f
+ * Live example: https://updown.io
+ */
+
+      .browser-mockup {
+        border-top: 2em solid rgba(230, 230, 230, 0.7);
+        position: relative;
+        height: 60vh;
+      }
+
+      .browser-mockup:before {
+        display: block;
+        position: absolute;
+        content: "";
+        top: -1.25em;
+        left: 1em;
+        width: 0.5em;
+        height: 0.5em;
+        border-radius: 50%;
+        background-color: #f44;
+        box-shadow: 0 0 0 2px #f44, 1.5em 0 0 2px #9b3, 3em 0 0 2px #fb5;
+      }
+
+      .browser-mockup > * {
+        display: block;
+      }
+
+      /* Custom code for the demo */
+
+      
+      .whatsapp-btn {
+	cursor:pointer;
+	position:fixed;
+	bottom:90px;
+	right:90px;
+	display:block;
+	width:90px;
+	height:90px;
+	border-radius:90px;
+	text-indent:-9999px;
+	background:#fff url(https://lh3.googleusercontent.com/-evFtor-f_w8/W4pfajfP17I/AAAAAAAAE9E/f7H52hrT5UoY4ZqdkxSGh2ZftYrH8fiDwCLcBGAs/s300/Whatsapp.png) no-repeat center center;
+	background-size:50% auto;
+	box-shadow:0 20px 25px rgba(0,0,0,.05);
+	transition:.2s;
+}
+.whatsapp-btn:active {
+	bottom:35px;
+}
+#whatsapp {
+	position:fixed;
+	z-index:+100;
+	bottom:0px;
+	right:0px;
+	display:block;
+	background:#fff;
+	box-shadow:0 20px 25px rgba(000);
+	max-width:-webkit-fill-available;
+	font-family:Helvetica, sans-serif;
+	font-size:90%;
+	border-radius:4px;
+	visibility:hidden;
+	opacity:0;
+	transition:.3s;
+}
+#whatsapp.toggle {
+    font-size: 100%;
+    padding: 1px;
+    position: relative;
+    visibility: initial;
+    opacity: unset;
+}
+@media(max-width:320px) {
+	.whatsapp-btn {
+		bottom:10px;
+		right:10px;
+	}
+	#whatsapp.toggle {
+		bottom:80px;
+		right:10px;
+		visibility:visible;
+		opacity:1;
+	}
+}
+#whatsapp label,
+#whatsapp a {
+	display:block;
+	margin:15px;
+	text-decoration:none;
+}
+#whatsapp input,
+#whatsapp textarea {
+	display:block;
+	border:1px solid #21811a;
+	box-shadow:inset 0 2px 5px #ffffff00;
+	width:100%;
+	padding:15px;
+	border-radius:2px;
+}
+#whatsapp input.nama {
+	text-transform:capitalize;
+}
+#whatsapp input:focus,
+#whatsapp textarea:focus {
+	border:1px solid #ddd;
+}
+#whatsapp textarea {
+	min-height:80px;
+	resize: none;
+}
+#whatsapp a {
+	cursor:pointer;
+	display:block;
+	padding:10px;
+	font-weight:bold;
+	text-align:center;
+	background:#25D366;
+	color:white;
+	border-radius:2px;
+}
+#whatsapp a:hover {
+	background:#20b558;
+            }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+  
+  <body class="dark leading-relaxed tracking-wide flex flex-col">
+
+
+
+    <section class="bg-gray-100 py-8">
+      <div class="container mx-auto px-2 pt-4 pb-12 text-gray-800">
+        <h2
+          class="w-full my-2 text-5xl font-black leading-tight text-center text-gray-800"
+        >
+          Penawaran Kami
+        </h2>
+        <div class="w-full mb-4">
+          <div
+            class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"
+          ></div>
+        </div>
+
+        <div
+          class="flex flex-col sm:flex-row justify-center pt-12 my-12 sm:my-4"
+        >
+          <!-- <div
+            class="flex flex-col w-5/6 lg:w-1/4 mx-auto lg:mx-0 rounded-none lg:rounded-l-lg bg-white mt-4"
+          >
+            <div
+              class="flex-1 bg-white text-gray-600 rounded-t rounded-b-none overflow-hidden shadow"
+            >
+              <div class="p-8 text-3xl font-bold text-center border-b-4">
+                Free
+              </div>
+              <ul class="w-full text-center text-sm">
+                <li class="border-b py-4">Thing</li>
+                <li class="border-b py-4">Thing</li>
+                <li class="border-b py-4">Thing</li>
+              </ul>
+            </div>
+            <div
+              class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6"
+            >
+              <div
+                class="w-full pt-6 text-3xl text-gray-600 font-bold text-center"
+              >
+                £0 <span class="text-base">for one user</span>
+              </div>
+              <div class="flex items-center justify-center">
+                <button
+                  class="mx-auto lg:mx-0 hover:underline gradient2 text-gray-800 font-bold rounded my-6 py-4 px-8 shadow-lg"
+                >
+                  Sign Up
+                </button>
+              </div>
+            </div>
+          </div> -->
+
+          <div
+            class="flex flex-col w-4/6 lg:w-2/3 mx-auto lg:mx-0 rounded-lg bg-white mt-4 sm:-mt-6 dark shadow hover:shadow-lg z-10"
+          >
+          <div
+          class="flex-none mt-auto rounded-b rounded-t-none overflow-hidden p-6"
+          >
+                <div class="flex-1 rounded-t rounded-b-none overflow-hidden">
+                  <div class="w-full p-8 text-white text-3xl font-bold text-center">Khusus hari ini Anda hanya perlu membayar:</div>
+                  <div class="w-full italic text-red-600 pt-6 text-7xl font-bold text-center">
+                    Hanya Rp 149.000 
+                  </div>
+                  <ul class="w-full text-center text-base font-bold">
+                    <li class="py-4 text-5xl text-white">FREE ONGKIR</li>
+                    <li class="py-4 text-white">*Harga bisa naik sewaktu-waktu</li>
+                    
+                  </ul>
+                </div>
+              
+             
+            </div>
+            <!-- FORMNYA -->
+            <div id="whatsapp" class="toggle">
+
+              <input class="tujuan" type="hidden" value="089681839908" /> <!-- No. WhatsApp -->
+              
+              <label>Nama :
+              <input class="nama" type="text" placeholder="Tulis Nama Lengkap." />
+              </label>
+              <label>Alamat :
+              <input class="alamat" type="alamat" placeholder="contoh : Jl.Tamansari I RT 002/008 No.1 Kel.Pekayon Kec.Ps Rebo Jak Tim." />
+              </label>
+              <label>Nomor telepon :
+              <input class="nomor" type="nomor" placeholder="contoh : 082225204112.." />
+              </label>
+              <label>Jumlah order / paket :
+              <textarea class="pesan" placeholder="contoh: 1 paket mainan pintar ebook.."></textarea>
+              </label>
+              <a class="submit">> KIRIM WHATSAPP</a>
+              
+              </div>
+            
+          </div>
+         
+          <!-- <div
+            class="flex flex-col w-5/6 lg:w-1/4 mx-auto lg:mx-0 rounded-none lg:rounded-l-lg bg-white mt-4"
+          >
+            <div
+              class="flex-1 bg-white text-gray-600 rounded-t rounded-b-none overflow-hidden shadow"
+            >
+              <div class="p-8 text-3xl font-bold text-center border-b-4">
+                Pro
+              </div>
+              <ul class="w-full text-center text-sm">
+                <li class="border-b py-4">Thing</li>
+                <li class="border-b py-4">Thing</li>
+                <li class="border-b py-4">Thing</li>
+              </ul>
+            </div>
+            <div
+              class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6"
+            >
+              <div
+                class="w-full pt-6 text-3xl text-gray-600 font-bold text-center"
+              >
+                £x.99 <span class="text-base">/ per user</span>
+              </div>
+              <div class="flex items-center justify-center">
+                <button
+                  class="mx-auto lg:mx-0 hover:underline gradient2 text-gray-800 font-bold rounded my-6 py-4 px-8 shadow-lg"
+                >
+                  Sign Up
+                </button>
+              </div>
+            </div>
+          </div> -->
+        </div>
+        <div class="flex items-center justify-center">
+          <button
+            class="mx-auto lg:mx-0 hover:underline gradient2 text-gray-800 font-bold rounded my-6 py-4 px-8 shadow-lg"
+            href="form.html"
+            >
+            Beli Sekarang
+          </button>
+        </div>
+      </div>
+     
+    </section>
+
+    <script>
+      $('.whatsapp-btn').click(function(){
+       $('#whatsapp').toggleClass('toggle');
+     });
+     // Onclick Whatsapp Sent!
+     $('#whatsapp .submit').click(WhatsApp);
+     
+     $("#whatsapp input, #whatsapp textarea").keypress(function() {
+       if (event.which == 13) WhatsApp();
+     });
+     var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+     function WhatsApp() {
+       var ph = '';
+       if ($('#whatsapp .nama').val() == '') { // Cek Nama
+         ph = $('#whatsapp .nama').attr('placeholder');
+         alert('Silahkan tulis ' + ph);
+         $('#whatsapp .nama').focus();
+         return false;
+       } else if ($('#whatsapp .alamat').val() == '') { // Cek alamat
+         ph = $('#whatsapp .alamat').attr('placeholder');
+         alert('Silahkan tulis ' + ph);
+         $('#whatsapp .alamat').focus();
+         return false;
+       } else if ($('#whatsapp .nomor').val() == '') { // Cek Nomor
+         ph = $('#whatsapp .nomor').attr('placeholder');
+         alert('Silahkan tulis ' + ph);
+         $('#whatsapp .nomor').focus();
+         return false;
+       } else if ($('#whatsapp .pesan').val() == '') { // Cek Pesan
+         ph = $('#whatsapp .pesan').attr('placeholder');
+         alert('Silahkan tulis ' + ph);
+         $('#whatsapp .pesan').focus();
+         return false;
+       } else {
+         if (!confirm("Kirim Ke WhatsApp?")) {
+           window.open("https://www.whatsapp.com/download/");
+         } else {
+           // Check Device (Mobile/Desktop)
+           var url_wa = 'https://web.whatsapp.com/send';
+           if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+             url_wa = 'whatsapp://send/';
+           }
+           // Get Value
+           var tujuan = $('#whatsapp .tujuan').val(),
+               via_url = location.href,
+               nama = $('#whatsapp .nama').val(),
+               alamat = $('#whatsapp .alamat').val(),
+                         nomor = $('#whatsapp .nomor').val(),
+               pesan = $('#whatsapp .pesan').val();
+           $(this).attr('href', url_wa + '?phone=62 ' + tujuan + '&text=Halo admin saya mau order, saya *' + nama + '* %0A%0AAlamat:%20' + alamat +' %0A%0ANo.tlp:%20'+ nomor + ' %0A%0APaket:%20' + pesan + '%0A%0AMohon dibantu total dan cara pembayarannya kak');
+           var w = 960,
+               h = 540,
+               left = Number((screen.width / 2) - (w / 2)),
+               tops = Number((screen.height / 2) - (h / 2)),
+               popupWindow = window.open(this.href, '', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=1, copyhistory=no, width=' + w + ', height=' + h + ', top=' + tops + ', left=' + left);
+           popupWindow.focus();
+           return false;
+         }
+       }
+     }
+     </script>
+  </body>
+</html>

@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Butuh Landing Page</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome if you need it
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+  -->
+    <link
+      href="https://unpkg.com/tailwindcss/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <!--Replace with your tailwind.css once created-->
+    <link
+      href="https://unpkg.com/@tailwindcss/custom-forms/dist/custom-forms.min.css"
+      rel="stylesheet"
+    />
+    <!--Tailwind Custom Forms - use to standardise form fields - https://github.com/tailwindcss/custom-forms-->
+
+    <style>
+      @import url("https://rsms.me/inter/inter.css");
+      html {
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+          "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+          "Noto Color Emoji";
+      }
+
+
+      /* SWIPER */
+      .swiper-slide  {
+        
+    width: 600px;
+    height: 600px;
+}
+      .swiper-content {
+  display: flex;
+  justify-content: center;
+}
+
+      .gradient {
+        background-image: linear-gradient(-225deg, #cbbacc 0%, #2580b3 100%);
+      }
+      .dark {
+        background-color: #113b53;
+      }
+      /* button,
+      .gradient2 {
+        background-color: #f39f86;
+        background-image: linear-gradient(315deg, #f39f86 0%, #f9d976 74%);
+      } */
+      button, .green{
+        background-color: #9b3;
+      }
+
+
+      /* Browser mockup code
+ * Contribute: https://gist.github.com/jarthod/8719db9fef8deb937f4f
+ * Live example: https://updown.io
+ */
+
+      .browser-mockup {
+        border-top: 2em solid rgba(230, 230, 230, 0.7);
+        position: relative;
+        height: 60vh;
+      }
+
+      .browser-mockup:before {
+        display: block;
+        position: absolute;
+        content: "";
+        top: -1.25em;
+        left: 1em;
+        width: 0.5em;
+        height: 0.5em;
+        border-radius: 50%;
+        background-color: #f44;
+        box-shadow: 0 0 0 2px #f44, 1.5em 0 0 2px #9b3, 3em 0 0 2px #fb5;
+      }
+
+      .browser-mockup > * {
+        display: block;
+      }
+
+      /* Custom code for the demo */
+    </style>
+  </head>
+
+  <body class="dark leading-relaxed tracking-wide flex flex-col">
+    <!--Nav-->
+    <nav id="header" class="w-full z-30 top-0 text-white py-1 lg:py-6">
+      <div
+        class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-2 py-2 lg:py-6"
+      >
+        <!-- <div class="pl-4 flex items-center">
+          <a
+            class="text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
+            href="#"
+          >
+            <svg
+              class="h-6 w-6 inline-block fill-current text-yellow-700"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+            >
+              <path d="M13 8V0L8.11 5.87 3 12h4v8L17 8h-4z" />
+            </svg>
+            Bolt App
+          </a>
+        </div> -->
+
+        <!-- <div class="block lg:hidden pr-4"> -->
+          <!-- <button
+            id="nav-toggle"
+            class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-800 hover:border-green-500 appearance-none focus:outline-none"
+          > -->
+            <!-- <svg
+              class="fill-current h-3 w-3"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>Menu</title>
+              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+            </svg>
+          </button>
+        </div> -->
+
+        <div
+          class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 text-black p-4 lg:p-0 z-20"
+          id="nav-content"
+        >
+          <!-- <ul class="list-reset lg:flex justify-end flex-1 items-center">
+            <li class="mr-3">
+              <a
+                class="inline-block py-2 px-4 text-black font-bold no-underline"
+                href="#"
+                >Active</a
+              >
+            </li>
+            <li class="mr-3">
+              <a
+                class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
+                href="#"
+                >link</a
+              >
+            </li>
+            <li class="mr-3">
+              <a
+                class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
+                href="#"
+                >link</a
+              >
+            </li>
+          </ul> -->
+          <!-- <button
+            id="navAction"
+            class="mx-auto lg:mx-0 hover:underline text-gray-800 font-extrabold rounded mt-4 lg:mt-0 py-4 px-8 shadow opacity-75"
+          >
+            Action
+          </button> -->
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mx-auto">
+      <div class="text-center px-3 lg:px-0">
+        <h1
+          class="my-4 text-xl text-white md:text-3xl lg:text-5xl font-black leading-tight"
+        >
+          Kelas Bahasa Online
+        </h1>
+        <p
+          class="leading-normal text-white text-base md:text-xl lg:text-2xl mb-8"
+        >
+          Apakah anda susah   berbicara Bahasa Inggris ?
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+
+          <!-- APASIH KELAS BAHASA START -->
+          Kelas Bahasa Online Aja
+        </p>
+
+        <!-- <button
+          class="mx-auto lg:mx-0 hover:underline text-gray-800 font-extrabold rounded my-2 md:my-6 py-4 px-8 shadow-lg w-48"
+        >
+          Sign Up
+        </button> -->
+        <!-- <a
+          href="#"
+          class="inline-block mx-auto lg:mx-0 hover:underline bg-transparent text-gray-600 font-extrabold my-2 md:my-6 py-2 lg:py-4 px-8"
+          >View Additional Action</a
+        > -->
+      </div>
+
+      <div class="text-center px-3 lg:px-0">
+        <h1
+          class="my-4 text-xl text-white md:text-3xl lg:text-5xl font-black leading-tight"
+        >
+          Apasih Kelas Bahasa Online itu ?
+        </h1>
+        <!-- <p
+          class="leading-normal text-white text-base md:text-xl lg:text-2xl mb-8"
+        >
+          Apakah anda susah   berbicara Bahasa Inggris ?
+        </p> -->
+
+        <!-- <button
+          class="mx-auto lg:mx-0 hover:underline text-gray-800 font-extrabold rounded my-2 md:my-6 py-4 px-8 shadow-lg w-48"
+        >
+          Sign Up
+        </button> -->
+        <!-- <a
+          href="#"
+          class="inline-block mx-auto lg:mx-0 hover:underline bg-transparent text-gray-600 font-extrabold my-2 md:my-6 py-2 lg:py-4 px-8"
+          >View Additional Action</a
+        > -->
+      </div>
+
+      <!-- <div class="flex items-center w-full mx-auto content-end">
+        <div
+          class="browser-mockup flex flex-1 m-6 md:px-0 md:m-12 bg-white w-1/2 rounded shadow-xl"
+        ></div>
+      </div> -->
+      
+      <div class="flex flex-wrap ">
+        <div class="w-5/6 sm:w-1/2 p-6 mx-auto">
+          <!-- <h1 class="text-white text-2xl text-center font-bold leading-none mb-3">
+            Mengapa Kelas Bahasa Online ?
+          </h1> -->
+          <p class="text-white mb-8">
+           Kelas Bahasa Online adalah Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+          </p>
+          <button
+          class="mx-auto lg:mx-0 hover:underline text-gray-800 font-extrabold rounded my-2 md:my-6 py-4 px-8 shadow-lg w-48"
+          onclick="window.location.href='#offer';"
+          >
+          Pesan Sekarang
+        </button>
+        </div>
+        <div class="w-full lg:w-1/2 lg:py-6 ">
+          <img src="./image/land-1.png" class="mx-auto" style="width: 300px;">  
+        </div>
+        
+        
+        
+      </div>
+       <!-- APASIH KELAS BAHASA END -->
+
+
+
+
+      <br>
+      <br>
+      <br>
+      <br>
+
+      <div class="text-center px-3 lg:px-0">
+      
+      </div>
+
+      <!-- <div class="flex items-center w-full mx-auto content-end">
+        <div
+          class="browser-mockup flex flex-1 m-6 md:px-0 md:m-12 bg-white w-1/2 rounded shadow-xl"
+        ></div>
+      </div> -->
+
+
+      <!-- MENGAPA KELAS BAHASA START-->
+      <div class="text-center px-3 lg:px-0">
+        <h1
+          class="my-4 text-xl text-white md:text-3xl lg:text-5xl font-black leading-tight"
+        >
+          Mengapa Kelas Bahasa Online ?
+        </h1>
+      </div>
+
+      <div class="flex flex-wrap mb-36" >
+        <div class="w-5/6 sm:w-1/2 p-6 mx-auto my-auto" >
+          <h1 class="text-white text-2xl text-center font-bold leading-none ">
+            Menghemat Waktu 
+          </h1>
+        </div>
+        <div class="w-full lg:w-1/2 lg:py-6 ">
+          <img src="./image/land-1.png" class="mx-auto" style="width: 300px;">  
+        </div>
+      </div>
+
+      <div class="flex flex-wrap mb-36" >
+        <div class="w-5/6 sm:w-1/2 p-6 mx-auto my-auto" >
+          <h1 class="text-white text-2xl text-center font-bold leading-none ">
+            Online Terasa Offline
+          </h1>
+        </div>
+        <div class="w-full lg:w-1/2 lg:py-6 ">
+          <img src="./image/land-1.png" class="mx-auto" style="width: 300px;">  
+        </div>
+      </div>  
+
+      <div class="flex flex-wrap mb-36" >
+        <div class="w-5/6 sm:w-1/2 p-6 mx-auto my-auto" >
+          <h1 class="text-white text-2xl text-center font-bold leading-none ">
+           Speaking Like Native
+          </h1>
+        </div>
+        <div class="w-full lg:w-1/2 lg:py-6 ">
+          <img src="./image/land-1.png" class="mx-auto" style="width: 300px;">  
+        </div>
+      </div>  
+
+      <div class="flex flex-wrap mb-36" >
+        <div class="w-5/6 sm:w-1/2 p-6 mx-auto my-auto" >
+          <h1 class="text-white text-2xl text-center font-bold leading-none ">
+           Tutor
+          </h1>
+        </div>
+        <div class="w-full lg:w-1/2 lg:py-6 ">
+          <img src="./image/land-1.png" class="mx-auto" style="width: 300px;">  
+        </div>
+      </div>  
+
+      <div class="flex flex-wrap mb-36" >
+        <div class="w-5/6 sm:w-1/2 p-6 mx-auto my-auto" >
+          <h1 class="text-white text-2xl text-center font-bold leading-none ">
+           Kurikulum
+          </h1>
+        </div>
+        <div class="w-full lg:w-1/2 lg:py-6 ">
+          <img src="./image/land-1.png" class="mx-auto" style="width: 300px;">  
+        </div>
+      </div>  
+       <!-- SIAPA START-->
+    <div class="text-center px-3 lg:px-0">
+      <h1
+        class="my-4 text-xl text-white md:text-3xl lg:text-5xl font-black leading-tight"
+      >
+       Siapa yang Seharusnya Mengikuti Kelas Ini ?
+      </h1>
+     
+    <div class="w-1/2 mx-auto lg:w-full lg:py-6 mb-36">
+      <img src="./image/016.png" class="mx-auto" style="width: 300px;">  
+      <h5
+      class="w-full mx-auto my-2 text-xl md:text-3xl lg:text-5xl font-black leading-tight text-center text-white"
+    >
+    Siswa SD/SMP/SMA
+    </h5>
+    </div>
+
+    <div class="w-1/2 mx-auto lg:w-full lg:py-6 mb-36">
+      <img src="./image/016.png" class="mx-auto" style="width: 300px;">  
+      <h5
+      class="w-full mx-auto my-2 text-xl md:text-3xl lg:text-5xl font-black leading-tight text-center text-white"
+    >
+    Mahasiswa
+    </h5>
+    </div>
+
+    <div class="w-1/2 mx-auto lg:w-full lg:py-6 mb-36">
+      <img src="./image/016.png" class="mx-auto" style="width: 300px;">  
+      <h5
+      class="w-full mx-auto my-2 text-xl md:text-3xl lg:text-5xl font-black leading-tight text-center text-white"
+    >
+    Pekerja
+    </h5>
+    </div>
+
+
+    </div>
+    <!-- SIAPA END -->
+
+      
+      <!-- MENGAPA KELAS BAHASA END -->
+
+    </div>
+
+   
+
+
+    <!-- <section class="bg-white border-b py-12 ">
+      <div
+        class="container mx-auto flex flex-wrap items-center justify-between pb-12"
+      >
+        <h2
+          class="w-full my-2 text-xl font-black leading-tight text-center text-gray-800 lg:mt-8"
+        >
+          Our Customers / Featured in
+        </h2>
+        <div class="w-full mb-4">
+          <div
+            class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"
+          ></div>
+        </div>
+
+        <div
+          class="flex flex-1 flex-wrap max-w-4xl mx-auto items-center justify-between text-xl text-gray-500 font-bold opacity-75"
+        >
+          <span class="w-1/2 p-4 md:w-auto flex items-center"
+            ><svg
+              class="h-10 w-10 mr-4 fill-current text-gray-500 opacity-75"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+            >
+              <path
+                d="M7 0H6L0 3v6l4-1v12h12V8l4 1V3l-6-3h-1a3 3 0 0 1-6 0z"
+              /></svg>
+            >TeeShirtz</span
+          >
+
+          <span class="w-1/2 p-4 md:w-auto flex items-center"
+            ><svg
+              class="h-10 w-10 mr-4 fill-current text-gray-500 opacity-75"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+            >
+              <path
+                d="M15.75 8l-3.74-3.75a3.99 3.99 0 0 1 6.82-3.08A4 4 0 0 1 15.75 8zM1.85 15.3l9.2-9.19 2.83 2.83-9.2 9.2-2.82-2.84zm-1.4 2.83l2.11-2.12 1.42 1.42-2.12 2.12-1.42-1.42zM10 15l2-2v7h-2v-5z"
+              /></svg>
+            >Mic.Check</span
+          >
+
+          <span class="w-1/2 p-4 md:w-auto flex items-center"
+            ><svg
+              class="h-10 w-10 mr-4 fill-current text-gray-500 opacity-75"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+            >
+              <path
+                d="M10 12a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-3a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm4 2.75V20l-4-4-4 4v-8.25a6.97 6.97 0 0 0 8 0z"
+              /></svg>
+            >BadgeLife.io</span
+          >
+
+          <span class="w-1/2 p-4 md:w-auto flex items-center"
+            ><svg
+              class="h-10 w-10 mr-4 fill-current text-gray-500 opacity-75"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+            >
+              <path
+                d="M15.3 14.89l2.77 2.77a1 1 0 0 1 0 1.41 1 1 0 0 1-1.41 0l-2.59-2.58A5.99 5.99 0 0 1 11 18V9.04a1 1 0 0 0-2 0V18a5.98 5.98 0 0 1-3.07-1.51l-2.59 2.58a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41l2.77-2.77A5.95 5.95 0 0 1 4.07 13H1a1 1 0 1 1 0-2h3V8.41L.93 5.34a1 1 0 0 1 0-1.41 1 1 0 0 1 1.41 0l2.1 2.1h11.12l2.1-2.1a1 1 0 0 1 1.41 0 1 1 0 0 1 0 1.41L16 8.41V11h3a1 1 0 1 1 0 2h-3.07c-.1.67-.32 1.31-.63 1.89zM15 5H5a5 5 0 1 1 10 0z"
+              /></svg>
+            >Bugz 4 Life</span
+          >
+        </div>
+      </div>
+    </section> -->
+
+
+    <!-- DIDAPAT START -->
+    <section class="gradient w-full mx-auto text-center pt-6 pb-12">
+      <h2
+        class="w-full mx-auto my-2 text-xl md:text-3xl lg:text-5xl font-black leading-tight text-center text-white"
+      >
+      Apa yang Kalian Dapat <br> 
+      dari Kelas Bahasa Online ?
+      </h2>
+      <!-- <div class="w-1/2 mx-auto lg:w-full lg:py-6 ">
+        <img src="./image/016.png" class="mx-auto" style="width: 300px;">  
+      </div> -->
+      <div class="w-full mb-4">
+        <div
+          class="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t"
+        ></div>
+      </div>
+
+      <ul class="w-2/5 mx-auto">
+        <li class=" py-4 text-left">
+          <span class="text-xl lg:text-3xl font-extrabold">1. Private 1 murid 1 Tutor</span> <br>
+     
+        </li>
+        
+        <li class=" py-4 text-left">
+          <span class="text-xl lg:text-3xl font-extrabold">2. Mengajar Tatap Muka lewat Zoom</span> <br>
+         
+        </li>
+
+        <li class=" py-4 text-left">
+          <span class="text-xl lg:text-3xl font-extrabold">3. 60 menit tiap Pertemuan</span> <br>
+         
+        </li>
+        <li class=" py-4 text-left">
+          <span class="text-xl lg:text-3xl font-extrabold">4. Speaking , grammar, vocabulary Paket Lengkap</span> <br>
+         
+        </li>
+      </ul>
+      <button
+        class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded my-6 py-4 px-8 shadow-lg"
+        onclick="window.location.href='#offer';"
+        >
+        Pesan Sekarang!
+      </button>
+    </section>
+    <!-- DIDAPAT END -->
+
+
+    <!-- PRICELIST START -->
+    <section class="bg-gray-100 py-8" id="offer">
+      <div class="container mx-auto px-2 pt-4 pb-12 text-gray-800">
+        <h2
+          class="w-full my-2 text-2xl lg:text-5xl font-black leading-tight text-center text-gray-800"
+        >
+          Pricelist
+        </h2>
+        <div class="w-full mb-4">
+          <div
+            class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"
+          ></div>
+        </div>
+
+        <div
+          class="flex flex-col sm:flex-row justify-center pt-12 my-12 sm:my-4"
+        >
+          <div
+            class="flex flex-col w-4/6 lg:w-2/3 mx-auto lg:mx-0 rounded-lg bg-white mt-4 sm:-mt-6 dark shadow hover:shadow-lg z-10"
+          >
+          <div
+          class="flex-none mt-auto rounded-b rounded-t-none overflow-hidden p-6"
+          >
+                <div class="flex-1 rounded-t rounded-b-none overflow-hidden">
+                  <div class="w-full p-8 text-white text-xl lg:text-3xl font-bold text-center">Khusus hari ini Anda hanya perlu membayar:</div>
+                  <div class="w-full italic text-red-600 pt-6 text-xl lg:text-5xl font-bold text-center">
+                    Hanya Rp35.000/meeting
+                  </div>
+                  <ul class="w-full text-center text-base font-bold">
+                    <li class="py-4 text-xl lg:text-5xl text-white">HARGA PROMO</li>
+                    <li class="py-4 text-white">*Harga bisa naik sewaktu-waktu</li>
+                    
+                  </ul>
+                </div>
+              
+             
+            </div>
+
+            
+          </div>
+         
+        </div>
+        <div class="flex items-center justify-center">
+          <button
+            class="bg-black mx-auto lg:mx-0 hover:underline text-white font-bold rounded my-6 py-4 px-8 shadow-lg"
+            onclick="window.location.href='/form.html';"
+            >
+            Beli Sekarang
+          </button>
+        </div>
+      </div>
+     
+    </section>
+    <!-- PRICELIST END -->
+    
+
+    <!-- CARA DAFTAR START -->
+    <section class="gradient w-full mx-auto text-center py-52">
+      <h2
+        class="w-full mx-auto my-2 text-xl md:text-3xl lg:text-5xl font-black leading-tight text-center text-white"
+      >
+      Anda Cukup Menghubungi Admin
+      </h2>
+      <!-- <div class="w-1/2 mx-auto lg:w-full lg:py-6 ">
+        <img src="./image/016.png" class="mx-auto" style="width: 300px;">  
+      </div> -->
+      <div class="w-full mb-4">
+        <div
+          class="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t"
+        ></div>
+      </div>
+
+     
+
+      <button
+        class="green mx-auto lg:mx-0 hover:underline bg-green-500 hover:bg-green-700 text-gray-800 font-bold rounded my-6 py-4 px-8 shadow-lg inline-flex flex justify-between items-center "
+        onclick="window.location.href= 'https://wa.link/tnyfqx;'"
+        >
+        <i class="fa fa-whatsapp"></i> 
+        Pesan Sekarang! 
+      </button>
+
+    </section>
+    <!-- CARA DAFTAR END -->
+
+
+    <!-- TESTIMONI START -->
+    <section>
+      <h2
+      class="w-full mx-auto mt-52 mb-10 text-xl md:text-3xl lg:text-5xl font-black leading-tight text-center text-white"
+    >
+    Apa Kata Mereka ?
+    </h2>
+      <div class="swiper-container w-100">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide px-20 py-6 flex items-center justify-center">
+              <div class="py-6">
+                <div class="flex justify-center py-4">
+                  <img class="h-auto w-96" src="./image/WhatsApp Image 2020-09-28 at 00.33.15.jpeg">
+                </div>
+             </div>
+            </div>
+            <div class="swiper-slide px-20 flex items-center justify-center">
+                  <div class="py-6">
+                    <div class="flex justify-center py-4">
+                      <img class="h-auto w-96" src="./image/WhatsApp Image 2020-09-28 at 00.33.15 (2).jpeg">
+                    </div>
+                  </div>
+              </div>
+              <div class="swiper-slide px-20 flex items-center justify-center">
+                <div class="py-6">
+                  <div class="flex justify-center py-4">
+                    <img class="h-auto w-96" src="./image/WhatsApp Image 2020-09-28 at 00.33.16.jpeg">
+                  </div>
+                </div>
+            </div>
+        </div>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev bg-white w-16 h-16 text-xs rounded-full text-green-500 mx-10"></div>
+            <div class="swiper-button-next bg-white w-16 h-16 text-xs rounded-full text-green-500 mx-10"></div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>   
+      </div>
+            </div>
+      </div>
+    </section>
+    <!-- TESTIMONI END -->
+
+    <!-- SUDAH MENDAFTAR START -->
+    <section class="w-full mx-auto text-center py-52">
+    <div class="text-center px-3 lg:px-0">
+      <h1
+        class="my-4 text-xl text-white md:text-3xl lg:text-5xl font-black leading-tight"
+      >
+        Sudah 00125 orang mendaftar
+      </h1>
+      <p class="text-3xl my-10">Yuk Sekarang giliranmu  <br>
+        Invest Your Future Here
+      </p>
+    </div>
+  </section>
+    <!-- SUDAH MENDAFTAR END -->
+
+  </div>
+    <!--Footer-->
+    <footer class="bg-white social-footer items-center">
+      <div class="container mx-auto mt-8 px-8">
+        <h1
+        class="my-4 text-xl text-black md:text-3xl lg:text-5xl font-black leading-tight text-center"
+      >
+        Kelas Bahasa Online
+      </h1>
+      <div class="w-full mx-auto self-center " >
+        <ul class="flex space-x-5" style="background-color: #2580b3;">
+          <li><a href="https://www.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+          <li><a href="https://www.instagram.com/?hl=en"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+          <li><a href="https://www.pinterest.com/"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+          <li><a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        </ul>
+      </div>
+      </div>
+    </footer>
+
+    <script>
+      var mySwiper = new Swiper ('.swiper-container', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+    
+        // If we need pagination
+        pagination: {
+          el: '.swiper-pagination',
+        },
+    
+        // Navigation arrows
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+    
+        // And if we need scrollbar
+        scrollbar: {
+          el: '.swiper-scrollbar',
+        },
+      })
+      </script>
+</body>
+ 
+</html>
